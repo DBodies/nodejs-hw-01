@@ -13,12 +13,10 @@ export const getAllContacts = async () => {
     try {
         const contacts = await fs.readFile(dbPath, 'utf-8');
         const parse = await JSON.parse(contacts);
-        console.log('Список файлів i каталогів:', parse);
         return parse;
     } catch (err) {
-        console.error('Помилка', err);
+        console.error(err);
     }
-
 };
 
 console.log(await getAllContacts());

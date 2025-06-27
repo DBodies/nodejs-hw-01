@@ -8,9 +8,7 @@ export const removeLastContact = async () => {
         const removed = contacts.pop();
         await writeContacts(contacts);
         return removed;
-    } else {
-        return "Your array is empty";
-    };
+    } 
 };
 
 removeLastContact();
